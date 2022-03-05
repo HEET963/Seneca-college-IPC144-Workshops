@@ -1,0 +1,85 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #5
+Full Name  : Aryan Khurana
+Student ID#: 145282216
+Email      : akhurana22@myseneca.ca
+Section    : NJJ
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. Mapping the month integer value to the first three characters of the month name could have been accomplished using 'Multiple' selection or 'case-by-case' selection construct.
+
+Multiple selection:
+We use a series of "else if" in combination with "if" and "else" to carry out multiple selection. If the first condition is true, the program skips the second and third sequences. If the first condition is false, the program skips the first sequence and evaluates the second condition. The program executes the second sequence only if the first condition is false and the second condition is true. The program executes the third sequence and skips the first two only if both conditions are false.
+
+// Syntax
+if (condition)
+    sequence
+else if (condition)
+    sequence
+else
+    sequence
+
+// Example in workshop
+if (month == 1)
+{
+  printf("%d-JAN-0%d\n", year, i);
+}
+
+........
+
+else if (month == 1)
+{
+  printf("%d-NOV-0%d\n", year, i);
+}
+
+else if (month == 1)
+{
+  printf("%d-DEC-0%d\n", year, i);
+}
+
+Case-by-case selection construct:
+The "switch" keyword issued to carry out case-by-case selection. If the condition matches a constant, the program executes the sequence associated with the case for that constant. The break; statement transfers control to the closing brace of the switch construct. Braces around the statements between case labels are unnecessary. If a break statement is missing for a particular case, control flows through to the subsequent case and the program executes the sequence under that case as well.
+The program executes the sequence following default only if the condition does not match any of the case constants. The default case is optional, and this keyword may be omitted.
+
+// Syntax
+switch (condition)
+{
+case constant:
+       sequence
+       break;
+case constant:
+       sequence
+       break;
+default:
+       sequence
+}
+
+// Example in workshop
+switch (month)
+{
+  case 1:
+      printf("%d-JAN-0%d\n", year, i);
+      break;
+
+  .......
+
+  case 11:
+      printf("%d-NOV-0%d\n", year, i);
+      break;
+
+  case 12:
+      printf("%d-DEC-0%d\n", year, i);
+      break;
+}
+
+2 The three types of iteration constructs are, 'while', 'do while' and 'for'.
+The 'while' construct executes its sequence if the test condition is true. The 'do while' construct executes its sequence at least once and continues executing it as long as the test condition is true. The 'for' construct groups the initialization, test condition and change together, separating them with semi-colons.
+In this workshop, I have used the 'while' loop to validate the values entered by the user. The basic idea behind running a 'while loop' is that the program should keep prompting the user for a value until the appropriate value is entered. When an appropriate value is entered, the condition to run the loop becomes false and hence the loop exits. I can also use a "do-while loop" in this program to prompt the user for an input once and then asking again if the input is not valid. I have chosen "while" just because of my personal preference.
+
+3. For syntactic and semantic errors, intellisense came to the rescue. Whenever you take steps which do not obey the rules of the language intellisense identifies the error and underlines it. If you hover over the underlined word or expression, you can get to know the error with the statement so that you can correct it. In case of problems with logic, I used the Visual Studio debugger which let me test my code at every step by using breakpoints throughout the program. This helped me to see what all values are being assigned to the variables and how are they being calculated.

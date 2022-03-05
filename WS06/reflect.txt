@@ -1,0 +1,41 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #6
+Full Name  : Aryan Khurana
+Student ID#: 145282216
+Email      : akhurana22@myseneca.ca
+Section    : NJJ
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. I have used three arrays which are parallel to each other in order to group data in this workshop.
+The arrays are as folows:
+double cost[wishListItems];
+int priority[wishListItems];
+char finance_options[wishListItems];
+
+In my opinion, the key was the number of items that the user wanted in his/her wishlist. The 'cost' array was used to store the cost of the items added to the wish list according to the index number. Example) The first item was stored at the 0th index, the second item was stored in the first index and so on. So if we want to access the third item for instance, we just have subtract one and look at the second index. The same concept was applied to the 'priority' array which was used to store the order of priority and the 'finance_options' array which determined whether the item has finance options or not.
+
+2. We should iterate arrays initializing the iterator variable to zero because indexing of arrays starts from 0. If you initialize iterations on arrays from 1, you will have to subtract one from the index each time you want to access an element in the array.
+
+For example) In this program I have initialized the iterations from 1.
+for (i = 1; i <= wishListItems; i++)
+
+Due to this, I have to subtract 1 from the index every time I want to access an element in the array.
+scanf("%lf", &cost[i - 1]);
+if (cost[i - 1] < min_cost)
+while (cost[i - 1] < min_cost);
+
+This could have been done in a better way if I had started the for loop from zero.
+for (i = 0; i < wishListItems; i++)
+
+Now, I do not have to subtract 1 every time I want to access a value from the array.
+scanf("%lf", &cost[i]);
+if (cost[i] < min_cost)
+while (cost[i] < min_cost);
+
+3. An array is like a ruler, with each centimeter being the position of a value in the array. Let us consider a standard 15cm scale. It starts from 0 and goes all the way to 15. Therefore, the ruler is like an array of size 15 which can hold up to 15 elements. Suppose you assign any integer value to all the numbers on the scale. Now, imagine that you have put the number 78 at the place where the scale reads 12. This means that the value is 78 and the position is 12. So, whenever you have to access 78, it would be available at 12th position. Note, the positions always start from zero, just like a ruler does. Therefore the positions in a 15 element long array would start from 0 and go upto 14. Also, note that all the numbers in the scale are one after the other (unless you break the scale of course). This is how the computer stores arrays in its memory. It always stores the individual values in array one after the other in the computer's memory.

@@ -1,0 +1,26 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #4
+Full Name  : Aryan Khurana
+Student ID#: 145282216
+Email      : akhurana22@myseneca.ca
+Section    : NJJ
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. Selection is a very important concept in programming because it allows the program to take decisions and apply logic in statements. Without the use of selection, programs will only have the ability to run from one end to the other without being able to execute a set of alternative sequences.
+Examples)
+I. I used an "if" statement to check whether the user is entering an amount of groceries which is less than, greater than or equal to the number of groceries the user had picked earlier. Using an if statement helped me to execute specific operations if a particular condition is met.
+II. I used an "else if" statement just after the "if" statement to check other conditions related to the grocery options the user picked. This helped me to execute specific operations which were supposed to be executed when a specific condition other than that in the "if" block is met.
+III. I also used a third "else if" statement to check if the conditions to exit the loop have been met. This enabled me to specify a condition which terminated the loop when it was true.
+
+2. Nested constructs are constructs where one logic construct is enclosed within another. Nested constructs are similar to crosswords. Firstly, you access the first row and iterate through all the columns in the first row. Then you go to the second row and iterate all columns in the second row. Then you go to the third row and so on. In the workshop, I have nested multiple while loops in one single while loop.
+The single while loop goes through all the fruits again and again until the user enters a zero to end the loop. However, the fruits consist of while loops as well. Each fruit has its own while loop to prompt the user multiple times to avoid incorrect inputs. Therefore, the larger while loop has a combination of while loops inside it. This is known as a nested construct.
+
+3. My favourite iteration construct is the "while loop". A while loop allows code to be executed repeatedly based on a given Boolean condition. The while loop can be thought of as a repeating if statement. It executes the code until a condition turns false. The "do while loop" is like the while loop but is not used much as the way it works is usually not required for majority of the programs. The "for loop" is as good as the "while loop". The "For loop" gives you so much more control and is very easy to use. You can specify the start, the end, and the increment/decrement very easily in a for loop as compared to a while loop. The only downside is that "for" loops, unlike "while" loops, do not work when you use a Boolean condition to run the whole loop.
+I have used a while loop multiple times in my assignment.
+For example) Part 2 runs on a single "while" loop (with multiple nested "while" loops) which states that the loop would be exited if the user presses "0" in a specific prompt. However, if the user enters "1" instead of a zero, the loop keeps on running. Here, a "for" loop couldn't be used very easily as one would have to specify the number of iterations beforehand unlike in a "while" loop. A "do-while" loop is also not preferred in this scenario.

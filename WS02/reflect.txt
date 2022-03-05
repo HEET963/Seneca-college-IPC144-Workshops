@@ -1,0 +1,30 @@
+*****************************************************************************
+                              Reflection
+                          Workshop - #2 (P2)
+Full Name  : Aryan Khurana
+Student ID#: 145282216
+Email      : akhurana22@myseneca.ca
+Section    : NJJ
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. For me, the most difficult expression was: 
+
+((daily_servings >= 1 && daily_servings <= 4) && (CFE1_bag_weight >= 0 && CFE1_bag_weight <= 250)) || ((daily_servings > 4 && daily_servings <= 9) && (CFE1_bag_weight > 250 && CFE1_bag_weight <= 500)) || (daily_servings >= 10 && (CFE1_bag_weight > 500 && CFE1_bag_weight <= 1000))
+
+I used this expression to check whether the daily servings and the bag weight gave a non zero value. The code is as follows:
+
+If the daily servings are greater than or equal to 1 and are smaller than or equal to 4, the bag weight should be greater than or equal to 0 and smaller than or equal to 250 in order to yield a non-zero value. If this condition is not true it checks the other one e
+which says, If the daily servings are greater than 4 and are smaller than or equal to 9, the bag weight should be greater than 250 and smaller than or equal to 500 in order to yield a non-zero value. If this condition is not true too, then it checks the last one which says, If the daily servings are greater than or equal to 10 and the bag weight is greater than 500 and smaller than or equal to 1000, a non-zero value is yielded.
+
+2. Original Expression: 
+((CFE2_type == 'L' || CFE2_type == 'l') && (coffee_strength == 'M' || coffee_strength == 'm')) || ((CFE2_type == 'B' || CFE2_type == 'b') && (coffee_strength == 'R' || coffee_strength == 'r'))
+
+After De Morgan's Law:
+((CFE2_type != 'L' || CFE2_type != 'l') || (coffee_strength != 'M' || coffee_strength != 'm')) || ((CFE2_type != 'B' || CFE2_type != 'b) || (coffee_strength != 'R' || coffee_strength != 'r'))
+
+3. In part 1, a variable was declared because the value of the average of three products' prices was not different for different products. Furthermore, we had to use the average value more than once in the code. Therefore, it is more convinient if we declare a variable initially and use that variable instead if writing the whole expression again. However, in part 2, the value of farenheit was different for all the three coffees which would have taken three variables. Also, the values were used only once in the whole code, so there was no point in making 3 variables just to use them once.
