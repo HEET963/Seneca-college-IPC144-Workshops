@@ -1,0 +1,67 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #8
+Full Name  : Aryan Khurana
+Student ID#: 145282216
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. In the case of the "ReportData" struct we have 3 integer variables and 6 double variables. Integer values take up 4 bytes in the memory compared to 8 bytes for a double variable.
+
+struct ReportData
+{
+    int skuNumber;
+    double productPrice;
+    int calories;
+    double productWeightPounds;
+    double productWeightKilos;
+    int productWeightGrams;
+    double servings;
+    double costPerServing;
+    double costCaloriesPerServing;
+};
+
+Bytes = 4*3 + 8*6
+Bytes = 12 + 48
+Bytes = 60
+Therefore, 'ReportData' take around 60 bytes in the memory.
+
+We could improve passing of information to functions by passing information by address instead of passing information by value.
+For instance, we have the function prototype for 'displayReportData' below:
+void displayReportData(const struct ReportData rd, const int cheapestProductCheck);
+
+In order to improve the efficiency of the program we should pass the parameters by address. Passing an object by address is efficient. It avoids copying all member values, saving time and space especially in cases where a member is an array with a large number of elements. Passing an object by address only copies the address, which typically occupies 4 bytes.
+We can change the function by passing addresses of the struct and the unmodifiable integer value instead of the copies of the parameters.
+void displayReportData(const struct ReportData* rd, const int* cheapestProductCheck);
+
+
+2. The'CatFoodInfo' and 'ReportData' structure contain common members such as 'skuNumber', 'productPrice', 'calories' and 'productWeight'. In order to improve the 'ReportData' structure we could have used 'CatFoodInfo' struct as a member of 'ReportData' instead of the common members. This has been demonstrated below:
+
+struct CatFoodInfo {
+    int skuNumber;
+    double productPrice;
+    int calories;
+    double productWeight;
+};
+
+struct ReportData
+{
+    struct CatFoodInfo cfi;
+    double productWeightKilos;
+    int productWeightGrams;
+    double servings;
+    double costPerServing;
+    double costCaloriesPerServing;
+};
+
+Due to this change that we made here we will have to change the 'printf' statement that we have used in the 'displayReportData' function too.
+
+Original: 
+printf("%07d %10.2lf %10.1lf %10.4lf %9d %8d %8.1lf %7.2lf %7.5lf", rd.skuNumber, rd.productPrice, rd.productWeightPounds, rd.productWeightKilos, rd.productWeightGrams, rd.calories, rd.servings, rd.costPerServing, rd.costCaloriesPerServing);
+
+Modified:
+printf("%07d %10.2lf %10.1lf %10.4lf %9d %8d %8.1lf %7.2lf %7.5lf", rd.cfi.skuNumber, rd.cfi.productPrice, rd.cfi.productWeight, rd.productWeightKilos, rd.productWeightGrams, rd.cfi.calories, rd.servings, rd.costPerServing, rd.costCaloriesPerServing);
