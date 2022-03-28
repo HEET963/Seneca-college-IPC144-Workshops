@@ -1,0 +1,20 @@
+/*
+*****************************************************************************
+                    Assignment 1 - Milestone 1 - Reflection
+Full Name  : Aryan Khurana
+Student ID#: 145282216
+Email      : akhurana22@myseneca.ca
+Section    : NJJ
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+*/
+
+1. For me 'inputCString' was the most challenging function to define. The main problem that I was facing was that the error was printed even before it took an input from the user. After spending hours on this error, I realized that this was happening because the buffer still had some values from the previous function which were being used in this function. The errors were basically printed before the user input because the buffer values were being validated instead of the values entered by the user. To prevent this, I realized that I have to clear the buffer before the function starts. So, I added the 'clearInputBuffer()' function at the end of the 'inputCharOption' function.
+
+2. Both '0' and 'NULL' when assigned to a variable, do the same thing. However, it is always better to assign a variable to a "safe empty state" because now the variable points to nothing in the memory. This means that is doesn’t have even 0 as its value, it is an empty variable which is assigned no space in the memory. If you want to initialize a variable where you want to increment or decrement values, you should consider initializing the variable with zero instead of NULL. NULL is used when you know that you are going to use the variable in the future and are just going to give it another value further done your code.
+
+3. I would start off by explaining buffer in a very simple manner. Buffer is basically like a box. For instance, if a box contains 3 plates and I require only 2 of them. I would take two plates out and only one plate would be left in the box. The plate inside the box is an unused value also known as "buffer value". In programming, sometimes we ask for a specific amount of data, this leads to the unused data being accessed by the function sometime later in the code. We do not want these buffer values to get entered instead of the values we want to enter. In order to achieve this, we delete the unused values by clearing the buffer. So it’s basically keeping only the values you want and discarding the rest of them.
