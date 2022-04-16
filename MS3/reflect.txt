@@ -1,0 +1,30 @@
+/*
+*****************************************************************************
+                        Assignment 1 - Milestone 3
+Full Name  : Aryan Khurana
+Student ID#: 145282216
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+*/
+
+1. Some of the functions I created in order to make my workflow easier are as follows.
+- void sort(struct Appointment appoints[], int max);
+    This function takes the Appointment struct array and uses bubble sort to sort the data in ascending order. The data is comprised of year, month, day, hour, and minute. Therefore, The function converts all of it into minutes for sorting and converts them back to their original values after it is done with the sorting. This was mainly used in the view function.
+- int validAppointment(int patientNumber, struct Date date, struct Appointment *app, int maxAppointments);
+    This function checks whether the details inputted by the user regarding an appointment are legitimate and the appointment actually exists. This function returns the index value of the appointment in the Appointment struct array. I have used this in the 'removeAppointment' function to check if the appointment that the user wants to remove actually exists or not.
+- int nextSlotAvailable(struct Appointment* app, int maxAppointments);
+    This function checks whether the Appointment struct array can take more appointment entries by checking if any entries have a patient number value which is less than one. This function returns '1' if a slot is available and '0' if it is not available. I have used this in the 'addAppointment' function to check whether there is space to accomodate another appointment.
+
+2. The ‘addAppointment’ function used approximately 50 - 60 lines of code. This is because much of the logic used in this function was essentially calling other functions. For instance, instead of validating whether we get inputs correctly, I used the functions defined in the core module. Functions such as ‘inputIntPositive()’ and ‘inputIntRange()’ were used to store and validate user inputs. I used the ‘timeSlotAvailable’ function to check whether there is enough space to schedule another appointment. ‘nextSlotAvailable()’ is a function which returns the index value which is vacant. This function helped me to assign an appointment to the vacant position. These functions basically covered the logic of iterating through the array and checking various conditions. I also used temporary structs for storing the data in a better manner which made the code smaller. Otherwise, I would have had to create individual variables to store the inputted values. Basically, I identified all the patterns and remembered that these were the things that I have done before. Using this approach I used the older functions in the ‘addAppointment’ to make the code smaller and increase the readability and maintainability of the code.
+
+3. This week’s milestone was very length and took me a long time to complete. Due to its complex nature, I faced a lot of problems at every step which slowed me down. Ideally, I should’ve completed one function per day starting from the day the MS was assigned to us. This would help me to manage the workload efficiently and avoid feeling pressurized. However, I started the MS on Friday and found it very difficult to complete before the deadline. I followed the recommended approach specified in the Milestone file.
+	- I started off by creating the ‘Time’, ‘Date’ and ‘Appointments’ datatypes. These were easy to create and I was done with it in 5-10 mins.
+	- The second step was to write the function definition for the ‘importPatients’ and ‘importAppointments’ functions. This was a very essential part of the milestone as everything done after these functions required these functions to work perfectly. These functions required complex formatting and I ran into errors several times.
+	- The third step was to sort the data in the Appointment struct array so that the data is displayed in the proper format. I spent a lot of time on this as I was trying different approaches and none of them seemed to work as I wanted them to. However, I was able to complete this function using bubble sort and converting all values into minutes for easy comparison.
+	The fourth step was defining the ‘viewAllAppointments’ function. This function was not very difficult to define as the main catch was that the data should be sorted.
+	The ‘viewAppointmentSchedule’ used some of the functions that we have used in the previous Milestones but this function was not too difficult as well.
+	For me, The ‘addAppointment’ and the ‘removeAppointment’ functions were the most difficult to define and I spent hours and hours trying to finish these. The challenge was basically using a combination of some of the old utility functions and defining some new functions which carried out specific tasks to help out with the process.

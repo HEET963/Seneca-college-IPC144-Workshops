@@ -1,0 +1,23 @@
+/*
+*****************************************************************************
+                    Assignment 1 - Milestone 2 - Reflection
+Full Name  : Aryan Khurana
+Student ID#: 145282216
+Email      : akhurana22@myseneca.ca
+Section    : NJJ
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+*/
+
+1. The factors that you must consider while naming a module or a library are as follows:
+    - You must make sure that the name is relevant and a user understands why it is used. For instance, in this assignment, we have used 'clinic' module to enhance readability instead of naming it randomly.
+    - You must ensure that if library files and source code have the same name, there must be a way to identify them.
+The best practice to identify header files is ending them with the '.h' extension in contrast to the '.c' extension that we give to source code files. For instance, in this assignment we have used 'core' files and 'clinic' files. To differentiate between the header files and source code that have the same name, we have named the files as 'clinic.c', 'clinic.h', 'core.h' and 'core.c.'. This helps us to know where our library is defined and where it is used.
+
+2. We have used two modules in this assignment to organize our code in a better manner and increase readability. In this assignment, the ‘core’ module contains utility functions and structures that are used in the ‘clinic’ module. We have seperated the modules because the ‘clinic’ module has its own functions and structures and makes use of the ‘core’ module to implement some functionality. If everything was done in a single module, we would have made a very complex and unreadable source code which would have been very difficult to manage and edit in the future.
+
+3. We basically split the module into two parts to increase the readability of our code. In this assignment, we have used the header files to declare the function prototypes for the functions that we were supposed to use in the source code and to declare the structures that we have used. The header file is also used to define macros and safeguards so that the source code is focused only on implementing the logic and not on these tasks.
