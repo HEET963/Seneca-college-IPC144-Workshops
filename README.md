@@ -11,8 +11,8 @@ This repository contains all the IPC144 (Introduction to programming using C) wo
 7. WS7: 9.9 / 10
 8. WS8: 9.7 / 10
 9. MS1: 4.5 / 5
-10. MS2:
-11. MS3:
+10. MS2: 4.8 / 5
+11. MS3: 4.8 / 5
 
 ### POINTS TO NOTE
 - WS3 contains some errors and doesn't give the expected output. Due to this I couldn't submit it on time so left it incomplete.
